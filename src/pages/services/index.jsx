@@ -42,8 +42,6 @@ const Service = () => {
                 <button style={{ padding: "10px", backgroundColor: "#00bbf0", color: "white", border: "none" , width:"10%" , cursor:"pointer" }}>View All</button>
             </div>
         </div>
-
-
     )
 
 }

@@ -7,26 +7,29 @@ import Service from './pages/services/index';
 import Team from './pages/Team/index';
 import './components/Header/header.css'
 import { Header } from './components/Header/Header';
-import {Footer} from './components/Footer/index';
+import { Footer } from './components/Footer/index';
 import './App.css';
+import NoteState from './context/notes/NoteState';
 
 function App() {
   return (
     <>
-      {/* <div className="container"> */}
-      <BrowserRouter>
-        <Header logo="Finexo" />
+      <NoteState> 
+        {/* <div className="container"> */}
+        <BrowserRouter>
+          <Header logo="Finexo" />
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/help" element={<Help />} />
-          <Route path="/service" element={<Service />} />
-          <Route path="/team" element={<Team />} />
-        </Routes>
-      </BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/help" element={<Help />} />
+            <Route path="/service" element={<Service />} />
+            <Route path="/team" element={<Team />} />
+          </Routes>
+        </BrowserRouter>
 
-      < Footer />
+        < Footer />
+      </NoteState>
     </>
     // </div>
   );
