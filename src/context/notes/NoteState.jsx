@@ -6,9 +6,7 @@ const NoteState = (props)=> {
     const state= {
         "name": "Amit",
         "job": "office"
-        
     }
-
     return (
         <NoteContext.Provider value ={state}>
             {props.children}

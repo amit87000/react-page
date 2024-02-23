@@ -1,14 +1,22 @@
-import React from "react";
-import {useContext} from "react";
+import React,{useState} from "react";
+import { useContext } from "react";
 import noteContext from "../../context/notes/noteContext";
 const Team = () => {
     const a = useContext(noteContext)
+    
+    const [data, setData] = useState('');
+    const handleChange = (e) => {
+        return setData(e.target.value)
+        
 
-
-    return ( 
+    }
+    return (
         <div>
             This is team {a.name} and he is in {a.job}
+            <input type="text" value="" onChange={handleChange} />
 
+
+            <p>{data}</p>
         </div>
 
 
